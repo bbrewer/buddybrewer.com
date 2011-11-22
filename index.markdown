@@ -11,3 +11,5 @@ Blog Posts
 ### <a href="{{ post.url }}">{{ post.title }}</a>
 <em>Posted on {{ post.date | date_to_long_string }}</em>
 {% endfor %}
+
+This is a test.
