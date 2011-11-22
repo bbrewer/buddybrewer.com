@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}" />
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+</head>
+
+<body style="padding-top: 40px">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container">
+      <h3><a href="/">Buddy Brewer</a></h3>
+      <ul class="nav">
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row" style="margin-top: 10px">
+  <div class="span4 columns">
+    <img src="/images/buddy.png" width="220">
+    <p style="margin-top: 15px; margin-bottom: 15px">
+      <strong>Web performance consultant, CrossFitter, NASCAR fan. I like things that go fast.</strong>
+    </p>
+    <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
+  </div>
+  <div class="span12 columns">
+    {{ content }}
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+(function() {
+  var twttr = document.createElement('script');
+  twttr.src = '//platform.twitter.com/widgets.js';
+  twttr.setAttribute('async', 'true');
+  document.documentElement.firstChild.appendChild(twttr);
+})();
+</script>
+
+</body>
+</html>
