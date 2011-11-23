@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Buddy Brewer
-description: Web performance consultant, CrossFitter, NASCAR fan. I like things that go fast.
+description: Web performance, CrossFit, NASCAR. I like things that go fast.
 ---
 
 Blog Posts
