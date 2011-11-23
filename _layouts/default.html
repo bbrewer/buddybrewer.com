@@ -3,6 +3,7 @@
 <head>
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}" />
+  <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
 </head>
 
@@ -21,14 +22,14 @@
 
 <div class="container">
 <div class="row" style="margin-top: 10px">
-  <div class="span4 columns">
-    <img src="/images/buddy.png" width="220">
+  <div class="span3">
+    <img src="/images/buddy.png">
     <p style="margin-top: 15px; margin-bottom: 15px">
       <strong>Web performance consultant, CrossFitter, NASCAR fan. I like things that go fast.</strong>
     </p>
     <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
   </div>
-  <div class="span12 columns">
+  <div class="span12 offset1">
     {{ content }}
   </div>
 </div>
