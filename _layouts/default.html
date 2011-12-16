@@ -13,9 +13,34 @@
     document.documentElement.firstChild.appendChild(twttr);
   })();
 
+  if (window.performance && window.performance.timing) {
+    window.ntStats = {
+      dns: window.performance.timing.domainLookupEnd - window.performance.timing.domainLookupStart,
+      connect: window.performance.timing.connectEnd - window.performance.timing.connectStart,
+      ttfb: window.performance.timing.responseStart - window.performance.timing.connectEnd,
+      basePage: window.performance.timing.responseEnd - window.performance.timing.responseStart,
+      frontEnd: window.performance.timing.loadEventStart - window.performance.timing.responseStart
+    };
+  }
+
+  function bucket(ms) {
+    if (ms < 100) return "< 100 ms";
+    if (ms < 500) return "100-499 ms";
+    if (ms < 1000) return "500-999 ms";
+    if (ms <= 3000) return "1-3 sec";
+    return "> 3 sec";
+  }
+
   {% if site.env == 'production' %}
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-23024889-1']);
+  if (window.performance && window.performance.timing) {
+    _gaq.push(["_setCustomVar", 1, "DNS", bucket(ntStats.dns), 3]);
+    _gaq.push(["_setCustomVar", 2, "Connect", bucket(ntStats.connect), 3]);
+    _gaq.push(["_setCustomVar", 3, "TTFB", bucket(ntStats.ttfb), 3]);
+    _gaq.push(["_setCustomVar", 4, "BasePage", bucket(ntStats.basePage), 3]);
+    _gaq.push(["_setCustomVar", 5, "FrontEnd", bucket(ntStats.frontEnd), 3]);
+  }
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -58,6 +83,8 @@
 
 {% if site.env == 'production' %}
   <script type='text/javascript' src='http://lognormal.net/boomerang/d08d81a2e6d1d2d38d96be3eb61c7fc1d09dc447675be040ea6ffd83'></script>
+  <script>
+  </script>
 {% endif %}
 
 </body>
