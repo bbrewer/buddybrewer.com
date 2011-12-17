@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Buddy Brewer - About
-description: A few words about me.
+description: I help companies measure, diagnose, and solve web performance issues.
 ---
 
-<h1>About Me</h1>
+# About Me
 
-I help companies measure, diagnose, and solve web performance issues.
+I have been building products that measure and diagnose web performance issues for almost ten years. I'm a co-founder of [Log Normal](http://www.lognormal.com), a company that shows you how long real people are waiting for your site to load. My personal mission is to help people make their web sites faster and reduce the amount of time people spend waiting for things on the web.
 
-You can also find me on <a href="https://www.facebook.com/buddybrewer">Facebook</a>, <a href="https://twitter.com/bbrewer">Twitter</a>, and <a href="http://http://www.linkedin.com/in/bbrewer">LinkedIn</a>.
+
+
+You can also find me on [Facebook](https://www.facebook.com/buddybrewer), [Twitter](https://twitter.com/bbrewer), and [LinkedIn](http://www.linkedin.com/in/bbrewer).
