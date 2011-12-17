@@ -13,21 +13,14 @@
     document.documentElement.firstChild.appendChild(twttr);
   })();
 
-  function bucket(ms) {
-    if (ms < 100) return "< 100 ms";
-    if (ms < 500) return "100-499 ms";
-    if (ms < 1000) return "500-999 ms";
-    if (ms <= 3000) return "1-3 sec";
-    return "> 3 sec";
-  }
-
   function getPerfStats() {
+    var timing = window.performance.timing;
     return {
-      dns: window.performance.timing.domainLookupEnd - window.performance.timing.domainLookupStart,
-      connect: window.performance.timing.connectEnd - window.performance.timing.connectStart,
-      ttfb: window.performance.timing.responseStart - window.performance.timing.connectEnd,
-      basePage: window.performance.timing.responseEnd - window.performance.timing.responseStart,
-      frontEnd: window.performance.timing.loadEventStart - window.performance.timing.responseStart
+      dns: timing.domainLookupEnd - timing.domainLookupStart,
+      connect: timing.connectEnd - timing.connectStart,
+      ttfb: timing.responseStart - timing.connectEnd,
+      basePage: timing.responseEnd - timing.responseStart,
+      frontEnd: timing.loadEventStart - timing.responseStart
     }
   };
 
@@ -78,7 +71,7 @@
     </p>
     <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
   </div>
-  <div class="span12 offset1">
+  <div class="span10 offset1">
     {{ content }}
   </div>
 </div>
