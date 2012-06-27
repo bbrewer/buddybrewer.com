@@ -13,17 +13,6 @@
     document.documentElement.firstChild.appendChild(twttr);
   })();
 
-  function getPerfStats() {
-    var timing = window.performance.timing;
-    return {
-      dns: timing.domainLookupEnd - timing.domainLookupStart,
-      connect: timing.connectEnd - timing.connectStart,
-      ttfb: timing.responseStart - timing.connectEnd,
-      basePage: timing.responseEnd - timing.responseStart,
-      frontEnd: timing.loadEventStart - timing.responseStart
-    }
-  };
-
   {% if site.env == 'production' %}
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-23024889-1']);
@@ -34,17 +23,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-  window.onload = function() {
-    if (window.performance && window.performance.timing) {
-      var ntStats = getPerfStats();
-      _gaq.push(["_trackEvent", "Navigation Timing", "DNS", undefined, ntStats.dns, true]);
-      _gaq.push(["_trackEvent", "Navigation Timing", "Connect", undefined, ntStats.connect, true]);
-      _gaq.push(["_trackEvent", "Navigation Timing", "TTFB", undefined, ntStats.ttfb, true]);
-      _gaq.push(["_trackEvent", "Navigation Timing", "BasePage", undefined, ntStats.basePage, true]);
-      _gaq.push(["_trackEvent", "Navigation Timing", "FrontEnd", undefined, ntStats.frontEnd, true]);
-    }
-  }
   {% endif %}
   </script>
 </head>
@@ -64,14 +42,14 @@
 
 <div class="container">
 <div class="row" style="margin-top: 10px">
-  <div class="span3">
+  <div class="span4">
     <img src="/images/buddy.png">
     <p style="margin-top: 15px; margin-bottom: 15px">
-      I'm a web performance consultant and co-founder of <a href="http://www.lognormal.com">Log Normal</a>, a company that shows you how fast real people think your web site is. This is my personal blog.
+      I'm a co-founder of <a href="http://www.lognormal.com">LogNormal</a>, a web performance company specializing in real user measurement. This is my personal blog.
     </p>
-    <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
+    <a href="http://twitter.com/bbrewer" class="twitter-follow-button" data-show-count="false">Follow @bbrewer</a>
   </div>
-  <div class="span10 offset1">
+  <div class="span9 offset1">
     {{ content }}
   </div>
 </div>

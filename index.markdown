@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Buddy Brewer
-description: Web performance consultant and co-founder of Log Normal.
+description: Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast.
 ---
 
 # Blog Posts
