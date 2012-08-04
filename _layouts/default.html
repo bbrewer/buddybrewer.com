@@ -4,7 +4,10 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}" />
   <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/css/bootstrap-1.4.0.min.css">
+  <link rel="stylesheet" href="/bootstrap-2.0.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap-2.0.4/css/bootstrap-responsive.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/styles.css">
   <script type="text/javascript">
   (function() {
     var twttr = document.createElement('script');
@@ -27,29 +30,19 @@
   </script>
 </head>
 
-<body style="padding-top: 40px">
-
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="container">
-      <h3><a href="/">Buddy Brewer</a></h3>
-      <ul class="nav">
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<body>
 
 <div class="container">
 <div class="row" style="margin-top: 10px">
-  <div class="span4">
-    <img src="/images/buddy.png">
-    <p style="margin-top: 15px; margin-bottom: 15px">
-      I'm a co-founder of <a href="http://www.lognormal.com">LogNormal</a>, a web performance company specializing in real user measurement. This is my personal blog.
-    </p>
-    <a href="http://twitter.com/bbrewer" class="twitter-follow-button" data-show-count="false">Follow @bbrewer</a>
+  <div class="span3">
+    <a href="/"><img src="/images/buddy.png"></a>
+    <a id="name" href="/">Buddy Brewer</a>
+    <div id="blurb">
+      <a href="http://www.lognormal.com">Real user measurement</a> entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. <a href="/about/">More...</a>.
+    </div>
+    <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
   </div>
-  <div class="span9 offset1">
+  <div class="span8 offset1">
     {{ content }}
   </div>
 </div>
@@ -58,8 +51,6 @@
 
 {% if site.env == 'production' %}
   <script type='text/javascript' src='http://lognormal.net/boomerang/d08d81a2e6d1d2d38d96be3eb61c7fc1d09dc447675be040ea6ffd83'></script>
-  <script>
-  </script>
 {% endif %}
 
 </body>

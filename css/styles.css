@@ -1,0 +1,51 @@
+/* Used on all pages */
+
+body {
+  margin-top: 10px;
+}
+
+#name {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8em;
+  margin-top: 15px;
+}
+
+#blurb {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  margin-bottom: 5px;
+}
+
+/* Home page */
+
+#post-index {
+  margin-top: 30px;
+  line-height: 1.4em;
+}
+
+#post-index a {
+  font-size: 1.3em;
+}
+
+#post-index p {
+  margin-bottom: 25px;
+}
+
+/* Posts */
+
+#post-date {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #999;
+}
+
+#content {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
