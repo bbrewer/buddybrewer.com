@@ -8,6 +8,14 @@ description: Web performance entrepreneur, CrossFitter, NASCAR fan. I like thing
 
 <div id="post-index">
 
+
+<p>
+  <a class="post-title" href="http://www.slideshare.net/buddybrewer/tying-web-performance-data-to-human-behavior">
+    Tying Web Performance Data to Human Behavior
+  </a><br>
+  <em>October 22, 2012 &mdash; LA Web Speed Meetup (Santa Monica, CA)</em>
+</p>
+
 <p>
   <a class="post-title" href="http://www.slideshare.net/buddybrewer/rum-for-breakfast-distilling-insights-from-the-noise">
     RUM for Breakfast: Distilling Insights From the Noise
