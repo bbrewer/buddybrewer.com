@@ -16,32 +16,7 @@
   })();
 
   {% if site.env == 'production' %}
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-23024889-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-  (function(){
-    var iframe = document.createElement('iframe');
-    iframe.src="javascript:false";
-    (iframe.frameElement || iframe).style.cssText = "width: 0; height: 0; border: 0";
-    var where = document.getElementsByTagName('script')[0];
-    where.parentNode.insertBefore(iframe, where);
-    var doc = iframe.contentWindow.document;
-    doc.open().write('<body onload="'+
-      'var js = document.createElement(\'script\');'+
-      'js.id = \'boomr-if-as\';'+
-      'BOOMR_lstart = new Date().getTime();'+
-      'js.src = \'//lognormal.net/boomerang/d08d81a2e6d1d2d38d96be3eb61c7fc1d09dc447675be040ea6ffd83\';'+
-      'document.body.appendChild(js);">');
-    doc.close();
-  })();
-{% endif %}
+  {% endif %}
   </script>
 </head>
 
