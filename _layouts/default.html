@@ -5,22 +5,6 @@
   <meta name="description" content="{{ page.description }}" />
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/css/combined.css">
-  <!--
-  <link rel="stylesheet" href="/bootstrap-2.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/bootstrap-2.3.2/css/bootstrap-responsive.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <script type="text/javascript">
-  (function() {
-    var twttr = document.createElement('script');
-    twttr.src = '//platform.twitter.com/widgets.js';
-    twttr.setAttribute('async', 'true');
-    document.documentElement.firstChild.appendChild(twttr);
-  })();
-
-  {% if site.env == 'production' %}
-  {% endif %}
-  </script>
-  -->
 </head>
 
 <body>
@@ -31,16 +15,26 @@
     <a href="/"><img id="buddypic" src="/images/buddy.png"></a>
     <a id="name" href="/">Buddy Brewer</a>
     <div id="blurb">
-      <a href="http://www.lognormal.com">Real user measurement</a> entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. <a href="/about/">More...</a>.
+      <a href="http://www.soasta.com/products/mpulse">Real user measurement</a> entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. <a href="/about/">More...</a>.
     </div>
     <a href="http://twitter.com/bbrewer" class="twitter-follow-button">Follow @bbrewer</a>
-    <div class="muted" id="perf-data" style="margin-top: 20px">Page loaded in 103ms</div>
+    <div class="muted" id="perf-data" style="margin-top: 20px"></div>
   </div>
   <div class="span8 offset1">
     {{ content }}
   </div>
 </div>
 </div>
+
+<script>
+window.addEventListener('load', function() {
+  var loadTime, banner = document.getElementById('perf-data');
+  if (window.performance && window.performance.timing) {
+    loadTime = window.performance.loadEventStart - window.performance.navigationStart;
+    if (loadTime >= 0) banner.innerHTML = 'Page loaded in ' + loadTime + 'ms';
+  }
+});
+</script>
 
 </body>
 </html>
