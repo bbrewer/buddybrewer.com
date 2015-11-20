@@ -1,0 +1,19 @@
+{
+  "name": "buddybrewer.com",
+  "homepage": "https://github.com/bbrewer/bbrewer.github.com",
+  "authors": [
+    "Buddy Brewer <buddy@buddybrewer.com>"
+  ],
+  "description": "Personal web site",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
