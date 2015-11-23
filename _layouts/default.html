@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <div class="container-fluid">
-<div class="row" style="margin-top: 10px">
+<div class="row">
   <div class="col-md-3">
     <p><a href="/"><img id="buddypic" class="center-block img-circle" src="/images/buddy.jpg"></a></p>
     <div class="text-center">
@@ -29,23 +29,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. (<a href="/about/">more</a>)
       </p>
     </div>
-    <div class="muted" id="perf-data" style="margin-top: 20px"></div>
   </div>
   <div class="col-md-9">
     {{ content }}
   </div>
 </div>
 </div>
-
-<script>
-window.addEventListener('load', function() {
-  var loadTime, banner = document.getElementById('perf-data');
-  if (window.performance && window.performance.timing) {
-    loadTime = window.performance.loadEventStart - window.performance.navigationStart;
-    if (loadTime >= 0) banner.innerHTML = 'Page loaded in ' + loadTime + 'ms';
-  }
-});
-</script>
 
 </body>
 </html>
