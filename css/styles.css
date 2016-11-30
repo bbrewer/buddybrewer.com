@@ -50,3 +50,8 @@ h1 {
   margin-top: 25px;
   margin-bottom: 50px;
 }
+
+#plt {
+  text-align: center;
+  color: #999;
+}
