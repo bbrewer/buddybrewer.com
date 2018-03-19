@@ -18,14 +18,11 @@ a {
 .sidebar {
   grid-column: span 1;
   text-align: center;
+  margin: 10px;
 }
 
 .content {
   grid-column: span 3;
-}
-
-#container-main {
-  margin-top: 2em;
 }
 
 #buddypic {
