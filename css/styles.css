@@ -1,7 +1,35 @@
 /* Used on all pages */
 
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sidebar {
+  grid-column: span 1;
+  text-align: center;
+}
+
+.content {
+  grid-column: span 3;
+}
+
 #container-main {
   margin-top: 2em;
+}
+
+#buddypic {
+  border-radius: 50%;
 }
 
 #name {
@@ -15,6 +43,7 @@
 #blurb {
   margin-top: 1em;
   margin-bottom: 1em;
+  color: #777;
 }
 
 h1 {

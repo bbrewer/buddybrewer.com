@@ -4,28 +4,28 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}" />
   <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 
-<div id="container-main" class="container-fluid">
-<div class="row">
-  <div class="col-md-3">
-    <p><a href="/"><img id="buddypic" class="center-block img-circle" src="/images/buddy.jpg"></a></p>
-    <div class="text-center">
-      <a id="name" href="/">Buddy Brewer</a>
-      <p id="blurb" class="text-muted">
-        Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. (<a href="/about/">more</a>)
-      </p>
-    </div>
+<div class="wrapper">
+
+  <div class="sidebar">
+    <div><a href="/"><img id="buddypic" src="/images/buddy.jpg"></a></div>
+    <p><a id="name" href="/">Buddy Brewer</a></p>
+    <p id="blurb" class="text-muted">
+      Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. (<a href="/about/">more</a>)
+    </p>
   </div>
-  <div class="col-md-9">
+
+  <div class="content">
     {{ content }}
+    <p id="plt"></p>
   </div>
+
 </div>
-<p id="plt"></p>
+
 <script>
   window.onload = function() {
       if (window.performance) {
@@ -36,8 +36,6 @@
     }
   };
 </script>
-
-</div>
 
 </body>
 </html>
