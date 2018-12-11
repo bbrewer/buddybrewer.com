@@ -6,7 +6,7 @@ description: I help companies measure, diagnose, and solve web performance issue
 
 <div style="margin-top: 50px;"></div>
 
-Buddy Brewer leads strategic initiatives for [SOASTA mPulse](http://www.soasta.com/performance-monitoring/), a real user measurement service that tells you how long people are waiting on your site and how it is impacting their behavior. Prior to SOASTA Buddy co-founded LogNormal, the first company to put measuring real users first in the crowded space of performance monitoring tools. LogNormal was acquired by SOASTA in 2012.
+Buddy helps companies find and fix performance problems that make customers unhappy and get in the way of revenue. A software engineer, product manager, and RUM entrepreneur at various points in his career, he has been building tools to help people make their sites faster for nearly 20 years.
 
 Buddy has been helping some of the largest sites on the web solve their performance challenges since 2001.
 
