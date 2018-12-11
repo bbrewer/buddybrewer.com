@@ -11,17 +11,23 @@
 
 <div class="wrapper">
 
-  <div class="sidebar">
-    <div><a href="/"><img id="buddypic" src="/images/buddy.jpg"></a></div>
-    <p><a id="name" href="/">Buddy Brewer</a></p>
-    <p id="blurb" class="text-muted">
-      Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. (<a href="/about/">more</a>)
-    </p>
-  </div>
+  <header>
+    <div class="sidebar">
+      <div><a href="/"><img id="buddypic" src="/images/buddy.jpg"></a></div>
+      <p><a id="name" href="/">Buddy Brewer</a></p>
+      <p id="blurb" class="text-muted">
+        Web performance entrepreneur, CrossFitter, NASCAR fan. I like things that go fast. (<a href="/about/">more</a>)
+      </p>
+    </div>
+  </header>
 
   <div class="content">
-    {{ content }}
-    <p id="plt"></p>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p id="plt"></p>
+    </footer>
   </div>
 
 </div>
